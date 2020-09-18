@@ -1,0 +1,52 @@
+<script>
+  $(function(){
+    $('a[href^=#]').click(function() {
+      var speed = 400;
+      var href= $(this).attr("href");
+      var target = $(href == "#" || href == "" ? 'html' : href);
+      var position = target.offset().top;
+      $('body,html').animate({scrollTop:position}, speed, 'linear');
+      return false;
+    });
+  });
+</script>
+
+<h2 id="index">目次</h2>
+<ul>
+	<li><a href="#sec1">section1</a></li>
+	<li><a href="#sec2">section2</a></li>
+	<li><a href="#sec3">section3</a></li>
+	<li><a href="#sec4">section4</a></li>
+	<li><a href="#sec5">section5</a></li>
+	<li><a href="sec#6">section6</a></li>
+</ul>
+
+<div id="sec1">
+	<h2>section1</h2>
+	<a class="button" href="#index">▲ 目次にもどる</a>
+</div>
+
+<div id="sec2">
+	<h2>section2</h2>
+	<a class="button" href="#index">▲ 目次にもどる</a>
+</div>
+
+<div id="sec3">
+	<h2>section3</h2>
+	<a class="button" href="#index">▲ 目次にもどる</a>
+</div>
+
+<div id="sec4">
+	<h2>section4</h2>
+	<a class="button" href="#index">▲ 目次にもどる</a>
+</div>
+
+<div id="sec5">
+	<h2>section5</h2>
+	<a class="button" href="#index">▲ 目次にもどる</a>
+</div>
+
+<div id="sec6">
+	<h2>section6</h2>
+	<a class="button" href="#index">▲ 目次にもどる</a>
+</div>
